@@ -6,6 +6,14 @@
   <title>Sajath Firthows | DevOps Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    html{scroll-behavior:smooth;}
+    .fade-in{animation:fadeIn 1.2s ease-in;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    .timeline{border-left:3px solid #38bdf8;padding-left:30px;}
+    .timeline div{margin-bottom:20px;}
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .project-card{background:#1e293b;border-radius:20px;padding:20px;transition:0.3s;}
+    .project-card:hover{transform:scale(1.03);box-shadow:0 15px 40px rgba(0,0,0,0.5);}
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -83,6 +91,11 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
+  <div style="margin-top:20px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center;">
+    <a href="resume.pdf" download style="background:#22c55e;color:#022c22;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;">📄 Download Resume</a>
+    <a href="https://github.com/" target="_blank" style="background:#0f172a;border:2px solid #38bdf8;color:#38bdf8;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;">GitHub</a>
+    <a href="https://linkedin.com" target="_blank" style="background:#0f172a;border:2px solid #38bdf8;color:#38bdf8;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;">LinkedIn</a>
+  </div>
 </header>
 
 <section id="about">
@@ -120,35 +133,50 @@
   </div>
 </section>
 
-<section id="experience">
+<section id="experience" class="fade-in">
   <h2>Professional Experience</h2>
-  <div class="card">
-    <h3>Associate Platform Engineer / DevOps Engineer</h3>
-    <ul>
-      <li>Designed and maintained CI/CD pipelines using Jenkins and GitHub Actions</li>
-      <li>Implemented DevSecOps security scanning with Trivy and Checkmarx</li>
-      <li>Managed AWS and Azure infrastructure environments</li>
-      <li>Deployed applications on Kubernetes clusters (AKS & EKS)</li>
-      <li>Automated infrastructure with Terraform</li>
-      <li>Monitored systems using Prometheus, Grafana, and Nagios</li>
-      <li>Improved deployment reliability and reduced manual intervention</li>
-    </ul>
+  <div class="card timeline">
+    <div>
+      <h3>DevOps / Platform Engineer</h3>
+      <p><strong>Key Responsibilities:</strong></p>
+      <ul>
+        <li>CI/CD implementation using Jenkins & GitHub Actions</li>
+        <li>DevSecOps automation with Trivy & Checkmarx</li>
+        <li>Cloud infrastructure management (AWS & Azure)</li>
+        <li>Kubernetes deployments (AKS & EKS)</li>
+        <li>Terraform infrastructure automation</li>
+        <li>Monitoring with Prometheus, Grafana & Nagios</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section id="projects">
-  <h2>Key Projects</h2>
-  <div class="card">
-    <h3>VUI - Conversational AI Platform</h3>
-    <p>Managed AWS infrastructure provisioning, CI/CD pipelines, VPN setup, Docker deployments, monitoring, and optimization for scalable performance.</p>
+<section id="projects" class="fade-in">
+  <h2>Advanced Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>VUI - Conversational AI Platform</h3>
+      <p>Multi-cloud infrastructure provisioning, CI/CD pipelines, VPN setup, containerized deployments, and monitoring optimization.</p>
+    </div>
+    <div class="project-card">
+      <h3>Incentivio Restaurant Platform</h3>
+      <p>CI/CD setup using Jenkins, distributed logging, real-time monitoring, and scalable Docker environments.</p>
+    </div>
+    <div class="project-card">
+      <h3>Enterprise DevSecOps Pipeline</h3>
+      <p>Automated vulnerability scanning integrated with CI/CD ensuring policy compliance and security enforcement.</p>
+    </div>
   </div>
+</section>
+
+<section id="certifications" class="fade-in">
+  <h2>Certifications & Achievements</h2>
   <div class="card">
-    <h3>Incentivio Mobile App Platform</h3>
-    <p>Led Jenkins CI/CD setup, infrastructure visualization, monitoring systems, and handled deployments across multiple environments.</p>
-  </div>
-  <div class="card">
-    <h3>DevSecOps Implementation Pipeline</h3>
-    <p>Integrated Trivy and Checkmarx for container and IaC security scanning with automated pipelines to ensure compliance and vulnerability prevention.</p>
+    <ul>
+      <li>AWS Cloud Practitioner (In Progress)</li>
+      <li>DevSecOps Practical Implementation</li>
+      <li>BSc Cyber Security (Ongoing)</li>
+    </ul>
   </div>
 </section>
 
